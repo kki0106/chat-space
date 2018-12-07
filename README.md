@@ -28,7 +28,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, index: true|
+|name|string|null: false, index: true|
 
 ### Association
 - has_many :users, through: :members
