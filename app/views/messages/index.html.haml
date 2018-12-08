@@ -6,26 +6,67 @@
       %h3.user-var__name
         Koki Okada
       %ul.user-var__menus
-        %li.user-var__menus__list
+        %li.user-var__menus--list
           = link_to root_path do
             %i.fa.fa-edit
-        %li.user-var__menus__list
+        %li.user-var__menus--list
           = link_to root_path do
             %i.fa.fa-cog
     .group-var
       .group
         %h3.group__name
           test
-        %p.group__info
+        %p.group__message
           まだメッセージはありません
       .group
         %h3.group__name
           aaaa
-        %p.group__info
+        %p.group__message
           まだメッセージはありません
       .group
         %h3.group__name
           sample
-        %p.group__info
+        %p.group__message
           まだメッセージはありません
 
+  .main
+    .group-info-var
+      .group-info
+        %h3.group-info__name
+          sampleグループ
+        %p.group-info__members
+          Members: Koki Okada
+      .edit
+        = link_to "Edit", root_path, class: 'button'
+    .chat-screen
+      .posts
+        %ul.posts__lists
+          %li.posts__lists--name
+            Koki Okada
+          %li.posts__lists--time
+            2018/12/01 0:00:00
+        %p.posts__message
+          なるほど
+      .posts
+        %ul.posts__lists
+          %li.posts__lists--name
+            Koki Okada
+          %li.posts__lists--time
+            2018/12/01 0:00:05
+        %p.posts__message
+          command Enterで送信したい感ある
+      .posts
+        %ul.posts__lists
+          %li.posts__lists--name
+            Koki Okada
+          %li.posts__lists--time
+            2018/12/01 0:00:05
+        %p.posts__message
+          お腹すいた
+    .post-form
+      = form_tag root_path, method: :get  do
+        %input{:type => "text", :placeholder => "type a message", :class => "post-form__message-form"}
+        %label.post-form__upload-label{for:"upload-icon"}
+          %i.fa.fa-picture-o
+          %input{type:"file",style:"display:none;",id:"upload-icon"}
+        %input{:type => "submit", :value => "send", :class => "post-form__send-button"}

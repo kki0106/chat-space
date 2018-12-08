@@ -1,0 +1,90 @@
+.main {
+  height: 100%;
+  width: calc(100vw - 300px);
+  .group-info-var {
+    height: 100px;
+    padding: 0 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid $border-color;
+    .group-info {
+      padding-top: 35px;
+      float: left;
+      &__name {
+        font-size: 20px;
+        color: $black;
+      }
+      &__members {
+        font-size: 12px;
+        color: $gray;
+        padding-top: 10px;
+      }
+    }
+    .edit {
+      @include clearfix();
+      float: right;
+      padding-top: 28px;
+      .button {
+        color: $light-blue;
+        display: inline-block;
+        padding:0 20px;
+        line-height: 40px;
+        text-decoration: none;
+        border: 2px solid;
+      }
+    }
+  }
+  .chat-screen {
+    height: calc(100vh - 100px - 120px);
+    background-color : $light-gray;
+    padding-top: 46px;
+    box-sizing: border-box;
+    .posts {
+      padding: 0 40px 0;
+      line-height: 20px;
+      &__lists {
+        &--name {
+          display: inline-block;
+          font-size: 16px;
+          color: $lamp-black;
+          font-weight: bold;
+        }
+        &--time {
+          display: inline-block;
+          font-size: 12px;
+          color: $gray;
+          padding-left: 10px;
+        }
+      }
+      &__message {
+        padding: 10px 0 40px;
+        font-size: 14px;
+        color: $lamp-black;
+      }
+    }
+  }
+  .post-form {
+    background-color : $pearl-gray;
+    height: 90px;
+    padding: 20px 40px 20px 40px;
+    box-sizing: border-box;
+    position: relative;
+    &__message-form {
+      height: 50px;
+      width: calc(100% - 140px);
+      padding-left: 10px;
+      border: none;
+    }
+    &__upload-label {
+      position: absolute;
+      top: 35px;
+      right: 180px;
+    }
+    &__send-button {
+      background-color: $light-blue;
+      height: 50px;
+      padding: 0 25px;
+      color: $white;
+      margin-left: 10px;
+    }
+  }
+}
