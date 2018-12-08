@@ -1,1 +1,31 @@
 = render partial: "notification"
+
+.wrapper
+  .side-menu
+    .user-var
+      %h3.user-var__name
+        Koki Okada
+      %ul.user-var__menus
+        %li.user-var__menus__list
+          = link_to root_path do
+            %i.fa.fa-edit
+        %li.user-var__menus__list
+          = link_to root_path do
+            %i.fa.fa-cog
+    .group-var
+      .group
+        %h3.group__name
+          test
+        %p.group__info
+          まだメッセージはありません
+      .group
+        %h3.group__name
+          aaaa
+        %p.group__info
+          まだメッセージはありません
+      .group
+        %h3.group__name
+          sample
+        %p.group__info
+          まだメッセージはありません
+
