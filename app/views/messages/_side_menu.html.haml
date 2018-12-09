@@ -1,14 +1,14 @@
 .side-menu
   .user-var
     %h3.user-var__name
-      Koki Okada
+      = current_user.name
     %ul.user-var__menus
       %li.user-var__menus--list
         = link_to root_path do
           %i.fa.fa-edit
       %li.user-var__menus--list
-        = link_to root_path do
-          %i.fa.fa-cog
+        = link_to edit_user_path(current_user) do
+          = fa_icon 'cog', class: 'icon'
   .group-var
     .group
       %h3.group__name
