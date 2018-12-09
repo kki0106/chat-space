@@ -9,11 +9,11 @@
 |password|string|null: false|
 
 ### Association
-- has_many :groups, through: :members
-- has_many :members
+- has_many :groups, through: :group_users
+- has_many :group_users
 - has_many :messages
 
-## membersテーブル
+## group_userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -31,8 +31,8 @@
 |name|string|null: false, index: true|
 
 ### Association
-- has_many :users, through: :members
-- has_many :members
+- has_many :users, through: :group_users
+- has_many :group_users
 - has_many :messages
 
 ## messagesテーブル
