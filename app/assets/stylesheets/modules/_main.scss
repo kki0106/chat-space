@@ -80,11 +80,13 @@
       right: 180px;
     }
     &__send-button {
+      position: absolute;
+      top: 20px;
+      right: 50px;
       background-color: $light-blue;
       height: 50px;
       padding: 0 25px;
       color: $white;
-      margin-left: 10px;
     }
   }
 }
