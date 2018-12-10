@@ -1,0 +1,10 @@
+.posts
+  %ul.posts__lists
+    %li.posts__lists--name
+      = message.user.name
+    %li.posts__lists--time
+      = message.created_at
+  - if message.content.present?
+    %p.posts__message
+      = message.content
+  = image_tag message.image.url, class: 'posts__image' if message.image.present?

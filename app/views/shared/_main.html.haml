@@ -8,30 +8,7 @@
     .edit
       = link_to "Edit", edit_group_path(id: params[:group_id]), class: 'button'
   .chat-screen
-    .posts
-      %ul.posts__lists
-        %li.posts__lists--name
-          Koki Okada
-        %li.posts__lists--time
-          2018/12/01 0:00:00
-      %p.posts__message
-        なるほど
-    .posts
-      %ul.posts__lists
-        %li.posts__lists--name
-          Koki Okada
-        %li.posts__lists--time
-          2018/12/01 0:00:05
-      %p.posts__message
-        command Enterで送信したい感ある
-    .posts
-      %ul.posts__lists
-        %li.posts__lists--name
-          Koki Okada
-        %li.posts__lists--time
-          2018/12/01 0:00:05
-      %p.posts__message
-        お腹すいた
+    = render @messages
   .post-form
     = form_for [@group, @message] do |f|
       = f.text_field :content, placeholder:"type a message", class:"post-form__message-form"
