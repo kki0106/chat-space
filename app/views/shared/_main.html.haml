@@ -2,9 +2,11 @@
   .group-info-var
     .group-info
       %h3.group-info__name
-        sampleグループ
+        = @group.name
       %p.group-info__members
-        Members: Koki Okada
+        Members:
+        - @group.users.each do |user|
+          = user.name
     .edit
       = link_to "Edit", edit_group_path(id: params[:group_id]), class: 'button'
   .chat-screen
