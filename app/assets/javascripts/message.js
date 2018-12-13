@@ -34,7 +34,7 @@ $(function(){
       $('.chat-screen').append(html);
       $('.post-form__message-form').val('')
       $('.post-form__send-button').prop('disabled', false);
-      $('.chat-screen').animate({ scrollTop: $('.chat-screen')[0].scrollHeight }, 1000,);
+      $('.chat-screen').animate({ scrollTop: $('.chat-screen')[0].scrollHeight }, 1000);
     })
     .fail(function(){
         alert('error');
