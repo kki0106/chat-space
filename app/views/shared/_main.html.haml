@@ -12,7 +12,7 @@
   .chat-screen
     = render @messages
   .post-form
-    = form_for [@group, @message] do |f|
+    = form_for [@group, @message], id: 'new_message' do |f|
       = f.text_field :content, placeholder:"type a message", class:"post-form__message-form"
       = f.label :image, class: "post-form__upload-label", for: "upload-icon" do
         = fa_icon 'picture-o', class: 'icon'
