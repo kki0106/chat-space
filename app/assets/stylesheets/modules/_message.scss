@@ -1,5 +1,5 @@
 .posts {
-  padding: 0 40px 0;
+  padding: 0 40px 40px;
   line-height: 20px;
   &__lists {
     &--name {
@@ -16,7 +16,7 @@
     }
   }
   &__message {
-    padding: 10px 0 40px;
+    padding: 10px 0 0px;
     font-size: 14px;
     color: $lamp-black;
   }
