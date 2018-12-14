@@ -3,7 +3,7 @@
     %li.posts__lists--name
       = message.user.name
     %li.posts__lists--time
-      = message.created_at
+      = message.created_at.strftime("%Y-%m-%d %H:%M")
   - if message.content.present?
     %p.posts__message
       = message.content
