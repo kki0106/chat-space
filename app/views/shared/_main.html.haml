@@ -8,7 +8,7 @@
         - @group.users.each do |user|
           = user.name
     .edit
-      = link_to "Edit", edit_group_path(id: params[:group_id]), class: 'button'
+      = link_to 'Edit', edit_group_path(@group), class: 'button'
   .chat-screen
     = render @messages
   .post-form
